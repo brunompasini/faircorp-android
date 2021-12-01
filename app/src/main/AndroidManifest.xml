@@ -16,6 +16,10 @@
             android:name=".WindowsActivity"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".WindowActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.EditText
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity :  BasicActivity() {
     val WINDOW_NAME_PARAM = "com.faircorp.windowname.attribute"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     /** Called when the user taps the button */
     fun openWindow(view: View) {
-        val windowName = findViewById<EditText>(R.id.txt_window_name).text.toString()
-
+        val windowName = findViewById<EditText>(R.id.main_window_name).text.toString().toLong()
         // Do something in response to button
         val intent = Intent(this, WindowActivity::class.java).apply {
             putExtra(WINDOW_NAME_PARAM, windowName)
